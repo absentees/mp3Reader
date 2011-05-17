@@ -7,8 +7,30 @@
   <%= csrf_meta_tag %>
 </head>
 <body>
+<div class="container">
+  <header>
+    <span class="heading">mp3Reader</span>
+    <nav>
+      <ul>
+        <li><%= link_to "Home", "/" %></li>
+        <li><%= link_to "Websites", "/websites" %></li>
+        <li>
+          <div id="user_nav">
+            <% if user_signed_in? %>
+                Signed in as <%= current_user.email %> Not you? <%= link_to "Sign out", destroy_user_session_path %>
+            <% else %>
+                <%= link_to "Sign up", new_user_registration_path %> or <%= link_to "Sign in", new_user_session_path %>
+            <% end %>
+          </div>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <% flash.each do |name, msg| %>
+      <%= content_tag :div, msg, :id => "flash_#{name}" %>
+  <% end %>
 
-<%= yield %>
-
+  <%= yield %>
+</div>
 </body>
 </html>
