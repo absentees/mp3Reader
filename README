@@ -4,9 +4,9 @@ created by absentees.tumblr.com
 
 TODO:
     1. Clean up Website MVC, redundant code.
-    2. Add "Feed" MVC.
-        Feed 'belongs' to User - User 'have one' feed.
-        Websites 'belong to' multiple feeds. Feeds 'have many' websites.
+    2. Add "Feed" MVC. - DONE
+        Feed 'belongs' to User - User 'have one' feed. - DONE
+        Websites 'belong to' multiple feeds. Feeds 'have many' websites. - DONE
     3. Make some pretty CSS style sheet.
-    4. Add Nokogiri as HTML scraper - https://github.com/tenderlove/nokogiri/wiki/
-    5. Implement logic for scraping links from websites.
+    4. Add Nokogiri as HTML scraper - https://github.com/tenderlove/nokogiri/wiki/ - DONE
+    5. Implement logic for scraping links from websites. - DONE
