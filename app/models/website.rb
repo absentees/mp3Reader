@@ -28,9 +28,10 @@ class Website < ActiveRecord::Base
     mp3_links = doc.xpath("//a").select { |link| link['href'] =~ /\.mp3$/ }
     mp3_links.each do |link|
       href = link['href']
-      name = link['']
+      name = href
 
       new_link = Link.create
+      new_link.file_name = name
       new_link.website_id = self.id
       new_link.url = href
       new_link.save!
