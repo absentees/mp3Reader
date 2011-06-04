@@ -10,7 +10,28 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110518070059) do
+ActiveRecord::Schema.define(:version => 20110604092719) do
+
+  create_table "feeds", :force => true do |t|
+    t.integer  "website_id"
+    t.integer  "user_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "feeds", ["user_id"], :name => "index_feeds_on_user_id", :unique => true
+
+  create_table "links", :force => true do |t|
+    t.integer  "website_id"
+    t.string   "url"
+    t.string   "fileType"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "file_name"
+  end
+
+  add_index "links", ["url"], :name => "index_links_on_url", :unique => true
+  add_index "links", ["website_id"], :name => "index_links_on_website_id"
 
   create_table "users", :force => true do |t|
     t.string   "email",                               :default => "", :null => false
@@ -37,7 +58,7 @@ ActiveRecord::Schema.define(:version => 20110518070059) do
     t.string   "feedUrl"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "user_id"
+    t.integer  "feed_id"
   end
 
 end
