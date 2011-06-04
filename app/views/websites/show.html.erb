@@ -11,10 +11,25 @@
 </p>
 
 <p>
-  <b>Feedurl:</b>
+  <b>Feed Url:</b>
   <%= @website.feedUrl %>
 </p>
 
+<table>
+  <tr>
+    <th>Link</th>
+    <th></th>
+  </tr>
 
-<%= link_to 'Edit', edit_website_path(@website) %> |
-<%= link_to 'Back', websites_path %>-
+  <% if @website.links.count > 0 %>
+      <% @website.links.each do |link| %>
+          <tr>
+            <td><%= link.url %></td>
+          </tr>
+      <% end %>
+      </table>
+  <% end %>
+
+  <%= link_to 'Crawl', crawl_url(@website) %> |
+  <%= link_to 'Edit', edit_website_path(@website) %> |
+  <%= link_to 'Back', websites_path %>

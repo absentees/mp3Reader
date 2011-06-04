@@ -1,16 +1,18 @@
 .container {
     width: 780px;
-    margin-left:auto;
-    margin-right:auto;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1em;
 }
 
-.flash_notice{
-    color:#7fffd4;
+.flash_notice {
+    color: #7fffd4;
 }
 
-.heading{
-    font-size:300%;
-    font-weight:bold;
+.heading {
+    margin: 5px;
+    font-size: 300%;
+    font-weight: bold;
 }
 
 /* Navigation */
@@ -42,3 +44,21 @@ nav ul li a:hover {
     text-decoration: underline;
 }
 
+.content {
+    padding-top: 1em;
+
+}
+
+table {
+    border-collapse: collapse;
+}
+
+th {
+    padding: 20px;
+}
+
+td {
+    padding-left: 15px;
+    padding-right: 15px;
+    border: 1px black dotted;
+}

@@ -1,0 +1,21 @@
+# == Schema Information
+# Schema version: 20110521064009
+#
+# Table name: feeds
+#
+#  id         :integer         not null, primary key
+#  website_id :integer
+#  user_id    :integer
+#  created_at :datetime
+#  updated_at :datetime
+#
+
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  website_id: 1
+  user_id: 1
+
+two:
+  website_id: 1
+  user_id: 1

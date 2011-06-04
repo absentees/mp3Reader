@@ -4,11 +4,22 @@ class WebsitesController < ApplicationController
   # GET /websites
   # GET /websites.xml
   def index
-    @websites = Website.all
+    @websites = current_user.feed.websites
 
     respond_to do |format|
       format.html # index.html.erb
-      format.xml  { render :xml => @websites }
+      format.xml { render :xml => @websites }
+    end
+  end
+
+  def crawl
+    @website = Website.find(params[:id])
+    @website.crawl
+
+    if @website.links.count > 0
+      redirect_to(@website, :notice => 'Link were successfully created.')
+    else
+      redirect_to(@website, :notice => 'No Links were successfully created.')
     end
   end
 
@@ -19,7 +30,7 @@ class WebsitesController < ApplicationController
 
     respond_to do |format|
       format.html # show.html.erb
-      format.xml  { render :xml => @website }
+      format.xml { render :xml => @website }
     end
   end
 
@@ -30,7 +41,7 @@ class WebsitesController < ApplicationController
 
     respond_to do |format|
       format.html # new.html.erb
-      format.xml  { render :xml => @website }
+      format.xml { render :xml => @website }
     end
   end
 
@@ -43,14 +54,15 @@ class WebsitesController < ApplicationController
   # POST /websites.xml
   def create
     @website = Website.new(params[:website])
+    @website.feed = current_user.feed
 
     respond_to do |format|
       if @website.save
         format.html { redirect_to(@website, :notice => 'Website was successfully created.') }
-        format.xml  { render :xml => @website, :status => :created, :location => @website }
+        format.xml { render :xml => @website, :status => :created, :location => @website }
       else
         format.html { render :action => "new" }
-        format.xml  { render :xml => @website.errors, :status => :unprocessable_entity }
+        format.xml { render :xml => @website.errors, :status => :unprocessable_entity }
       end
     end
   end
@@ -63,10 +75,10 @@ class WebsitesController < ApplicationController
     respond_to do |format|
       if @website.update_attributes(params[:website])
         format.html { redirect_to(@website, :notice => 'Website was successfully updated.') }
-        format.xml  { head :ok }
+        format.xml { head :ok }
       else
         format.html { render :action => "edit" }
-        format.xml  { render :xml => @website.errors, :status => :unprocessable_entity }
+        format.xml { render :xml => @website.errors, :status => :unprocessable_entity }
       end
     end
   end
@@ -79,7 +91,7 @@ class WebsitesController < ApplicationController
 
     respond_to do |format|
       format.html { redirect_to(websites_url) }
-      format.xml  { head :ok }
+      format.xml { head :ok }
     end
   end
 end

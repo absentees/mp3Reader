@@ -1,25 +1,25 @@
 # == Schema Information
-# Schema version: 20110604034525
+# Schema version: 20110604092719
 #
-# Table name: websites
+# Table name: links
 #
 #  id         :integer         not null, primary key
-#  name       :string(255)
+#  website_id :integer
 #  url        :string(255)
-#  feedUrl    :string(255)
+#  fileType   :string(255)
 #  created_at :datetime
 #  updated_at :datetime
-#  feed_id    :integer
+#  file_name  :string(255)
 #
 
 # Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
 
 one:
-  name: MyString
+  website_id: 1
   url: MyString
-  feedUrl: MyString
+  fileType: MyString
 
 two:
-  name: MyString
+  website_id: 1
   url: MyString
-  feedUrl: MyString
+  fileType: MyString
