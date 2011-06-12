@@ -24,7 +24,7 @@
   <% if @website.links.count > 0 %>
       <% @website.links.each do |link| %>
           <tr>
-            <td><%= link.url %></td>
+            <td><%=	 link_to link.file_name, link.url %></td>
           </tr>
       <% end %>
       </table>

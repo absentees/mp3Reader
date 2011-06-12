@@ -15,7 +15,7 @@
 class Link < ActiveRecord::Base
   belongs_to :website
   validates :website_id, :presence => true
-  validates :url, :presence => true
+  validates :url, :presence => true, :uniqueness => true
   validates :file_name, :presence => true
 
 
