@@ -7,21 +7,20 @@
           <tr>
             <th>Website</th>
             <th>Link</th>
-            <th></th>
-            <th></th>
+            <th>Date Added</th>
           </tr>
-
           <% @feed.websites.each do |website| %>
               <% website.links.each do |link| %>
                   <tr>
                     <td><%= link_to website.name, website.url %></td>
                     <td><%= link_to link.file_name, link.url %></td>
+                    <td><%= link.created_at %></td>
                   </tr>
               <% end %>
           <% end %>
         </table>
     <% end %>
 <% else %>
-    <p><%= link_to "Sign up", new_user_registration_path %> / log in</p>
+    <p><%= link_to "Sign up", new_user_registration_path %> / <%= link_to "Sign in", new_user_session_path %></p>
 
 <% end %>

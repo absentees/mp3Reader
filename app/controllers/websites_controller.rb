@@ -13,14 +13,21 @@ class WebsitesController < ApplicationController
   end
 
   def crawl
-    @website = Website.find(params[:id])
-    @website.crawl
 
-    if @website.links.count > 0
-      redirect_to(@website, :notice => 'Link were successfully created.')
+    if params[:id] == "all"
+      current_user.feed.websites.each do |site|
+        site.crawl
+      end
     else
-      redirect_to(@website, :notice => 'No Links were successfully created.')
+      @website = Website.find(params[:id])
+      @website.crawl
+      if @website.links.count > 0
+        redirect_to(@website, :notice => 'Link were successfully created.')
+      else
+        redirect_to(@website, :notice => 'No Links were successfully created.')
+      end
     end
+    redirect_to(root_path)
   end
 
   # GET /websites/1

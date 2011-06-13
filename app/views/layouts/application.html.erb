@@ -1,24 +1,24 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Mp3Reader</title>
-  <%= stylesheet_link_tag :all %>
+  <title>mp3Reader</title>
+  <%= render 'layouts/stylesheets' %>
   <%= javascript_include_tag :all %>
-
   <%= csrf_meta_tag %>
 </head>
 <body>
 <div class="container">
   <header>
-    <span class="heading">mp3Reader</span><br/>
-    in dev!
+    <span class="heading">mp3Reader</span> in dev!
+
     <nav>
       <ul>
         <li><%= link_to "Home", "/" %></li>
-        <li><%= link_to "Websites", "/websites" %></li>
         <li>
           <div id="user_nav">
             <% if user_signed_in? %>
+                <li><%= link_to "Websites", "/websites" %></li>
+                <li><%= link_to "Crawl All Websites", "/websites/all/crawl" %></li>
                 Signed in as <%= current_user.email %> Not you? <%= link_to "Sign out", destroy_user_session_path %>
             <% else %>
                 <%= link_to "Sign up", new_user_registration_path %> or <%= link_to "Sign in", new_user_session_path %>

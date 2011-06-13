@@ -18,5 +18,6 @@ class Link < ActiveRecord::Base
   validates :url, :presence => true, :uniqueness => true
   validates :file_name, :presence => true
 
+  default_scope :order => "links.created_at DESC"
 
 end

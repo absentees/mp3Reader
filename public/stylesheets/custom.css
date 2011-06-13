@@ -1,8 +1,16 @@
+body{
+    width:100%;
+}
+
 .container {
-    width: 780px;
-    margin-left: auto;
-    margin-right: auto;
+    padding-left: 2em;
+    padding-right: 1em;
     margin-top: 1em;
+}
+
+.content {
+    margin-left: 2em;
+    margin-right: 2em;
 }
 
 .flash_notice {
@@ -17,6 +25,7 @@
 
 /* Navigation */
 nav {
+    margin-top: 2em;
     float: right;
 }
 
@@ -44,21 +53,3 @@ nav ul li a:hover {
     text-decoration: underline;
 }
 
-.content {
-    padding-top: 1em;
-
-}
-
-table {
-    border-collapse: collapse;
-}
-
-th {
-    padding: 20px;
-}
-
-td {
-    padding-left: 15px;
-    padding-right: 15px;
-    border: 1px black dotted;
-}
