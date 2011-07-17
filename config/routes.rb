@@ -1,19 +1,10 @@
 Mp3Reader::Application.routes.draw do
-  get "link/create"
-
-  get "link/destroy"
-
-  get "link/show"
-
-  get "link/edit"
-
   devise_for :users
 
   resources :websites
 
   root :to => 'pages#home'
   match '/websites', :to => 'websites#index'
-  match '/links', :to => 'link#show'
   match '/websites/:id/crawl', :to => 'websites#crawl', :as => :crawl
 
   # The priority is based upon order of creation:

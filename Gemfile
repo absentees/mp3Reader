@@ -9,6 +9,7 @@ gem 'sqlite3-ruby', :require => 'sqlite3'
 gem 'devise', '1.1.6'
 gem 'nokogiri'
 gem 'ruby-mp3info'
+gem 'will_paginate'
 
 group :development do
   gem 'annotate-models', '1.0.4'

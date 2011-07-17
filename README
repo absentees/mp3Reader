@@ -1,6 +1,6 @@
 mp3Reader
 
-created by absentees.tumblr.com
+created by @absentees
 
 TODO:
     1. Clean up Website MVC, redundant code.
@@ -10,4 +10,8 @@ TODO:
     3. Make some pretty CSS style sheet. - DONEish (added blueprint css stylesheet)
     4. Add Nokogiri as HTML scraper - https://github.com/tenderlove/nokogiri/wiki/ - DONE
     5. Implement logic for scraping links from websites. - DONE
-    6. Crawl All controller method
+    6. Crawl All controller method - DONE
+    7. Add full screen table CSS.
+    8. Add search/sorting functionality.
+    9. Add logo/branding.
+    10. Mechanize Gem to get links for Mediafire/YouSendIt etc.
