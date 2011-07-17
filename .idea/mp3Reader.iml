@@ -12,7 +12,19 @@
   <component name="GemRequirementsHolder" version="3">
     <requirement>
       <requirement>
+        <dependency name="annotate-models" version="1.0.4" bound="EQUAL" git="false" path="false" doRequire="true" />
+      </requirement>
+      <source from="Gemfile" />
+    </requirement>
+    <requirement>
+      <requirement>
         <dependency name="devise" version="1.1.6" bound="EQUAL" git="false" path="false" doRequire="true" />
+      </requirement>
+      <source from="Gemfile" />
+    </requirement>
+    <requirement>
+      <requirement>
+        <dependency name="nokogiri" version="0" bound="GREATER_OR_EQUAL" git="false" path="false" doRequire="true" />
       </requirement>
       <source from="Gemfile" />
     </requirement>
@@ -24,7 +36,19 @@
     </requirement>
     <requirement>
       <requirement>
+        <dependency name="ruby-mp3info" version="0" bound="GREATER_OR_EQUAL" git="false" path="false" doRequire="true" />
+      </requirement>
+      <source from="Gemfile" />
+    </requirement>
+    <requirement>
+      <requirement>
         <dependency name="sqlite3-ruby" version="0" bound="GREATER_OR_EQUAL" lib="sqlite3" git="false" path="false" doRequire="true" />
+      </requirement>
+      <source from="Gemfile" />
+    </requirement>
+    <requirement>
+      <requirement>
+        <dependency name="will_paginate" version="0" bound="GREATER_OR_EQUAL" git="false" path="false" doRequire="true" />
       </requirement>
       <source from="Gemfile" />
     </requirement>
@@ -37,34 +61,38 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" scope="PROVIDED" name="[gem] activeresource (v3.0.1, /Library/Ruby/Gems/1.8/gems/activeresource-3.0.1)" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="[gem] railties (v3.0.1, /Library/Ruby/Gems/1.8/gems/railties-3.0.1)" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="[gem] activesupport (v3.0.1, /Library/Ruby/Gems/1.8/gems/activesupport-3.0.1)" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="[gem] activerecord (v3.0.1, /Library/Ruby/Gems/1.8/gems/activerecord-3.0.1)" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="[gem] bundler (v1.0.10, /Library/Ruby/Gems/1.8/gems/bundler-1.0.10)" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="[gem] actionmailer (v3.0.1, /Library/Ruby/Gems/1.8/gems/actionmailer-3.0.1)" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="[gem] actionpack (v3.0.1, /Library/Ruby/Gems/1.8/gems/actionpack-3.0.1)" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="[gem] rails (v3.0.1, /Library/Ruby/Gems/1.8/gems/rails-3.0.1)" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="[gem] sqlite3-ruby (v1.2.5, /Library/Ruby/Gems/1.8/gems/sqlite3-ruby-1.2.5)" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="[gem] abstract (v1.0.0, /Library/Ruby/Gems/1.8/gems/abstract-1.0.0)" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="[gem] treetop (v1.4.9, /Library/Ruby/Gems/1.8/gems/treetop-1.4.9)" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="[gem] rack-test (v0.5.7, /Library/Ruby/Gems/1.8/gems/rack-test-0.5.7)" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="[gem] rack (v1.2.2, /Library/Ruby/Gems/1.8/gems/rack-1.2.2)" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="[gem] rack-mount (v0.6.14, /Library/Ruby/Gems/1.8/gems/rack-mount-0.6.14)" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="[gem] activemodel (v3.0.1, /Library/Ruby/Gems/1.8/gems/activemodel-3.0.1)" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="[gem] i18n (v0.4.2, /Library/Ruby/Gems/1.8/gems/i18n-0.4.2)" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="[gem] arel (v1.0.1, /Library/Ruby/Gems/1.8/gems/arel-1.0.1)" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="[gem] mime-types (v1.16, /Library/Ruby/Gems/1.8/gems/mime-types-1.16)" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="[gem] rake (v0.8.7, /Library/Ruby/Gems/1.8/gems/rake-0.8.7)" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="[gem] thor (v0.14.6, /Library/Ruby/Gems/1.8/gems/thor-0.14.6)" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="[gem] mail (v2.2.15, /Library/Ruby/Gems/1.8/gems/mail-2.2.15)" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="[gem] erubis (v2.6.6, /Library/Ruby/Gems/1.8/gems/erubis-2.6.6)" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="[gem] polyglot (v0.3.1, /Library/Ruby/Gems/1.8/gems/polyglot-0.3.1)" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="[gem] tzinfo (v0.3.26, /Library/Ruby/Gems/1.8/gems/tzinfo-0.3.26)" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="[gem] builder (v2.1.2, /Library/Ruby/Gems/1.8/gems/builder-2.1.2)" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="[gem] devise (v1.1.6, /Library/Ruby/Gems/1.8/gems/devise-1.1.6)" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="[gem] bcrypt-ruby (v2.1.4, /Library/Ruby/Gems/1.8/gems/bcrypt-ruby-2.1.4)" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="[gem] warden (v1.0.4, /Library/Ruby/Gems/1.8/gems/warden-1.0.4)" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="treetop (v1.4.9, ruby-1.8.7-p174) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="will_paginate (v3.0.pre2, ruby-1.8.7-p174) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="rack (v1.2.2, ruby-1.8.7-p174) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="activeresource (v3.0.1, ruby-1.8.7-p174) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="railties (v3.0.1, ruby-1.8.7-p174) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="activemodel (v3.0.1, ruby-1.8.7-p174) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="arel (v1.0.1, ruby-1.8.7-p174) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="nokogiri (v1.4.4, ruby-1.8.7-p174) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="rake (v0.8.7, ruby-1.8.7-p174) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="thor (v0.14.6, ruby-1.8.7-p174) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="mail (v2.2.15, ruby-1.8.7-p174) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="activerecord (v3.0.1, ruby-1.8.7-p174) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="bundler (v1.0.10, ruby-1.8.7-p174) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="rails (v3.0.1, ruby-1.8.7-p174) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="sqlite3-ruby (v1.2.5, ruby-1.8.7-p174) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="ruby-mp3info (v0.6.13, ruby-1.8.7-p174) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="builder (v2.1.2, ruby-1.8.7-p174) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="devise (v1.1.6, ruby-1.8.7-p174) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="bcrypt-ruby (v2.1.4, ruby-1.8.7-p174) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="abstract (v1.0.0, ruby-1.8.7-p174) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="rack-test (v0.5.7, ruby-1.8.7-p174) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="warden (v1.0.4, ruby-1.8.7-p174) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="rack-mount (v0.6.14, ruby-1.8.7-p174) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="i18n (v0.4.2, ruby-1.8.7-p174) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="activesupport (v3.0.1, ruby-1.8.7-p174) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="mime-types (v1.16, ruby-1.8.7-p174) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="annotate-models (v1.0.4, ruby-1.8.7-p174) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="erubis (v2.6.6, ruby-1.8.7-p174) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="actionmailer (v3.0.1, ruby-1.8.7-p174) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="tzinfo (v0.3.26, ruby-1.8.7-p174) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="polyglot (v0.3.1, ruby-1.8.7-p174) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="actionpack (v3.0.1, ruby-1.8.7-p174) [gem]" level="application" />
   </component>
 </module>
 
