@@ -4,3 +4,7 @@ log/*.log
 tmp/**/*
 
 .idea/mp3Reader.iml
+
+.idea/mp3Reader.iml
+
+.idea/dataSources.ids
