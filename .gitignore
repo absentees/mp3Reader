@@ -2,9 +2,4 @@
 db/*.sqlite3
 log/*.log
 tmp/**/*
-
-.idea/mp3Reader.iml
-
-.idea/mp3Reader.iml
-
-.idea/dataSources.ids
+.idea/*
