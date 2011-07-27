@@ -1,5 +1,5 @@
 class FeedsController < ApplicationController
-  before_filter :authenticate_user!
+  before_filter :authenticate_user
 
   def create
    @feed = current_user.feed.build(params[:feed])

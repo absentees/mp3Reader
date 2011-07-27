@@ -23,9 +23,14 @@ body{
     font-weight: bold;
 }
 
+.footer{
+    margin-left: 2em;
+}
+
 /* Navigation */
 nav {
-    margin-top: 2em;
+    margin: 5px;
+
     float: right;
 }
 

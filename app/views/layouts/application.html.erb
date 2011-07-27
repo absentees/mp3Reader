@@ -5,6 +5,11 @@
   <%= render 'layouts/stylesheets' %>
   <%= javascript_include_tag :all %>
   <%= csrf_meta_tag %>
+  <style type="text/css">
+      .footer {
+          text-align: center;
+      }
+  </style>
 </head>
 <body>
 <div class="container">
@@ -28,11 +33,15 @@
       </ul>
     </nav>
   </header>
-  <% flash.each do |name, msg| %>
-      <%= content_tag :div, msg, :id => "flash_#{name}" %>
-  <% end %>
-
+  <p>
+      <% flash.each do |name, msg| %>
+          <%= content_tag :div, msg, :id => "flash_#{name}" %>
+      <% end %>
+  </p>
   <div class="content"><%= yield %></div>
 </div>
+<footer>
+  <span class="footer">@absentees</span>
+</footer>
 </body>
 </html>

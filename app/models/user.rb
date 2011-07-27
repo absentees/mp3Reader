@@ -30,4 +30,9 @@ class User < ActiveRecord::Base
 
   has_one :feed, :foreign_key => "id", :dependent => :destroy
 
+  def after_initialize
+        self.feed = Feed.new(:user_id => self.id)
+        self.feed.save
+  end
+
 end
