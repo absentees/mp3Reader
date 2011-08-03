@@ -1,23 +1,21 @@
 <% if user_signed_in? %>
     <p>
-      <% if @feed.websites.count.equal?(0) %>
+      <% if @feed_items.count.equal?(0) %>
           No websites added yet!
       <% else %>
         <table>
           <tr>
-            <th>Website</th>
-            <th>Link</th>
-            <th>Date Added</th>
+            <th><%= sortable "name", "Website" %></th>
+            <th><%= sortable "file_name", "Link" %></th>
+            <th><%= sortable "created_at", "Date Added" %></th>
           </tr>
-          <% @feed.websites.each do |website| %>
-              <% website.links.each do |link| %>
+              <% @feed_items.each do |link| %>
                   <tr>
-                    <td><%= link_to website.name, website.url %></td>
+                    <td><%= link_to link.website.name, link.website.url %></td>
                     <td><%= link_to link.file_name, link.url %></td>
                     <td><%= link.created_at %></td>
                   </tr>
               <% end %>
-          <% end %>
         </table>
     <% end %>
 <% else %>

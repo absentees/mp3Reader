@@ -25,14 +25,21 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
+  after_save :create_feed
+
   # Setup accessible (or protected) attributes for your model
   attr_accessible :email, :password, :password_confirmation, :remember_me
 
   has_one :feed, :foreign_key => "id", :dependent => :destroy
 
-  def after_initialize
-        self.feed = Feed.new(:user_id => self.id)
-        self.feed.save
+  def feed_items
+    Link.from_websites_in_user_feed(self)
   end
+
+  private
+    def create_feed
+        self.feed ||= Feed.new(:user_id => self.id)
+        self.feed.save
+    end
 
 end

@@ -20,8 +20,6 @@ class Website < ActiveRecord::Base
   belongs_to :feed
   has_many :links, :foreign_key => "website_id", :dependent => :destroy
 
-  default_scope :order => "websites.created_at DESC"
-
   #crawl website URL for mp3 links
   def crawl
     doc = Nokogiri::HTML(open(self.url))

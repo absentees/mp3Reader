@@ -18,6 +18,10 @@ class Link < ActiveRecord::Base
   validates :url, :presence => true, :uniqueness => true
   validates :file_name, :presence => true
 
-  default_scope :order => "links.created_at DESC"
+  def self.from_websites_in_user_feed(user)
+    feed_websites = user.feed.websites.map(&:id).join(", ")
+    joins(:website).where("website_id IN (#{feed_websites})")
+
+  end
 
 end
