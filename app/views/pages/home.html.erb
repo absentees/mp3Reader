@@ -1,22 +1,11 @@
 <% if user_signed_in? %>
     <p>
       <% if @feed_items.count.equal?(0) %>
-          No websites added yet!
+          Nothing here!
       <% else %>
-        <table>
-          <tr>
-            <th><%= sortable "name", "Website" %></th>
-            <th><%= sortable "file_name", "Link" %></th>
-            <th><%= sortable "created_at", "Date Added" %></th>
-          </tr>
-              <% @feed_items.each do |link| %>
-                  <tr>
-                    <td><%= link_to link.website.name, link.website.url %></td>
-                    <td><%= link_to link.file_name, link.url %></td>
-                    <td><%= link.created_at %></td>
-                  </tr>
-              <% end %>
-        </table>
+        <!--TODO finish AJAX sorting -->
+        <div id="feed_table"><%= render 'feed_table' %></div>
+
     <% end %>
 <% else %>
     <p><%= link_to "Sign up", new_user_registration_path %> / <%= link_to "Sign in", new_user_session_path %></p>

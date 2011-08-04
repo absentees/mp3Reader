@@ -1,0 +1,23 @@
+<%= form_tag root_url, :method => 'get' do %>
+    <%= hidden_field :direction, params[:direction] %>
+    <%= hidden_field :sort, params[:sort] %>
+    <p>
+      <%= text_field_tag :search, params[:search] %>
+      <%= submit_tag "Search", :name => nil %>
+    </p>
+<% end %>
+<table class="feedTable">
+  <tr>
+    <th><%= sortable "name", "Website" %></th>
+    <th><%= sortable "file_name", "Link" %></th>
+    <th><%= sortable "created_at", "Date Added" %></th>
+  </tr>
+  <% @feed_items.each do |link| %>
+      <tr>
+        <td><%= link_to link.website.name, link.website.url %></td>
+        <td><%= link_to link.file_name, link.url %></td>
+        <td><%= link.created_at %></td>
+      </tr>
+  <% end %>
+</table>
+<%= will_paginate @feed_items %>

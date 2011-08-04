@@ -58,3 +58,17 @@ nav ul li a:hover {
     text-decoration: underline;
 }
 
+.feedTable th .current {
+  padding-right: 12px;
+  background-repeat: no-repeat;
+  background-position: right center;
+}
+
+.feedTable th .asc {
+  background-image: url(/images/up_arrow.gif);
+}
+
+.feedTable th .desc {
+  background-image: url(/images/down_arrow.gif);
+}
+

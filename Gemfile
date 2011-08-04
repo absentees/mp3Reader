@@ -10,6 +10,7 @@ gem 'devise', '1.1.6'
 gem 'nokogiri'
 gem 'ruby-mp3info'
 gem 'will_paginate'
+gem 'jquery-rails'
 
 group :development do
   gem 'annotate-models', '1.0.4'

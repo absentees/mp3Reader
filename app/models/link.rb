@@ -24,4 +24,12 @@ class Link < ActiveRecord::Base
 
   end
 
+  def self.search(search)
+    if search
+      where('file_name LIKE ?', "%#{search}%")
+    else
+      scoped
+    end
+  end
+
 end
