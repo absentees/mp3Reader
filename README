@@ -12,6 +12,6 @@ TODO:
     5. Implement logic for scraping links from websites. - DONE
     6. Crawl All controller method - DONE
     7. Add full screen table CSS.
-    8. Add search/sorting functionality.
+    8. Add search/sorting functionality. - DONE (maybe add some ajax?)
     9. Add logo/branding.
     10. Mechanize Gem to get links for Mediafire/YouSendIt etc.
