@@ -1,4 +1,4 @@
-<%= form_tag root_url, :method => 'get' do %>
+<%= form_tag root_url, :method => 'get', :id => "feed_table_search" do %>
     <%= hidden_field :direction, params[:direction] %>
     <%= hidden_field :sort, params[:sort] %>
     <p>
