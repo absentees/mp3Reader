@@ -1,8 +1,8 @@
 class WebsitesController < ApplicationController
   before_filter :authenticate_user!
 
-  # GET /websites
-  # GET /websites.xml
+    # GET /websites
+    # GET /websites.xml
   def index
     @websites = current_user.feed.websites
 
@@ -21,17 +21,13 @@ class WebsitesController < ApplicationController
     else
       @website = Website.find(params[:id])
       @website.crawl
-      if @website.links.count > 0
-        redirect_to(@website, :notice => 'Link were successfully created.')
-      else
-        redirect_to(@website, :notice => 'No Links were successfully created.')
-      end
+      redirect_to(root_path, :notice => "Successfully crawled website(s)")
     end
-    redirect_to(root_path)
+    redirect_to(root_path, :notice => "Successfully crawled website(s)")
   end
 
-  # GET /websites/1
-  # GET /websites/1.xml
+    # GET /websites/1
+    # GET /websites/1.xml
   def show
     @website = Website.find(params[:id])
 
@@ -41,8 +37,8 @@ class WebsitesController < ApplicationController
     end
   end
 
-  # GET /websites/new
-  # GET /websites/new.xml
+    # GET /websites/new
+    # GET /websites/new.xml
   def new
     @website = Website.new
 
@@ -52,13 +48,13 @@ class WebsitesController < ApplicationController
     end
   end
 
-  # GET /websites/1/edit
+    # GET /websites/1/edit
   def edit
     @website = Website.find(params[:id])
   end
 
-  # POST /websites
-  # POST /websites.xml
+    # POST /websites
+    # POST /websites.xml
   def create
     @website = Website.new(params[:website])
     @website.feed = current_user.feed
@@ -74,8 +70,8 @@ class WebsitesController < ApplicationController
     end
   end
 
-  # PUT /websites/1
-  # PUT /websites/1.xml
+    # PUT /websites/1
+    # PUT /websites/1.xml
   def update
     @website = Website.find(params[:id])
 
@@ -90,8 +86,8 @@ class WebsitesController < ApplicationController
     end
   end
 
-  # DELETE /websites/1
-  # DELETE /websites/1.xml
+    # DELETE /websites/1
+    # DELETE /websites/1.xml
   def destroy
     @website = Website.find(params[:id])
     @website.destroy

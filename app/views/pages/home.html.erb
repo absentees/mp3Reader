@@ -1,9 +1,8 @@
 <% if user_signed_in? %>
     <p>
       <% if @feed_items.count.equal?(0) %>
-          Nothing here!
+          <div id="feed_table"><%= render 'feed_table' %></div>
       <% else %>
-        <!--TODO finish AJAX sorting -->
         <div id="feed_table"><%= render 'feed_table' %></div>
 
     <% end %>

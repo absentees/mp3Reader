@@ -5,17 +5,12 @@
   <%= render 'layouts/stylesheets' %>
   <%= javascript_include_tag :all %>
   <%= csrf_meta_tag %>
-  <style type="text/css">
-      .footer {
-          text-align: center;
-      }
-  </style>
 </head>
 <body>
 <div class="container">
+
   <header>
     <span class="heading">mp3Reader</span> in dev!
-
     <nav>
       <ul>
         <li><%= link_to "Home", "/" %></li>
@@ -25,6 +20,7 @@
                 <li><%= link_to "Websites", "/websites" %></li>
                 <li><%= link_to "Crawl All Websites", "/websites/all/crawl" %></li>
                 Signed in as <%= current_user.email %> Not you? <%= link_to "Sign out", destroy_user_session_path %>
+
             <% else %>
                 <%= link_to "Sign up", new_user_registration_path %> or <%= link_to "Sign in", new_user_session_path %>
             <% end %>
@@ -33,15 +29,18 @@
       </ul>
     </nav>
   </header>
-  <p>
-      <% flash.each do |name, msg| %>
-          <%= content_tag :div, msg, :id => "flash_#{name}" %>
-      <% end %>
-  </p>
-  <div class="content"><%= yield %></div>
+  <hr>
+  <div class="content">
+    <% flash.each do |name, msg| %>
+        <%= content_tag :div, msg, :id => "flash_#{name}" %>
+    <% end %>
+    <%= yield %>
+  </div>
+  <div class="push"></div>
 </div>
+
 <footer>
-  <span class="footer">@absentees</span>
+  <div class="footer">@absentees</div>
 </footer>
 </body>
 </html>
