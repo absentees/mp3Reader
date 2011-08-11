@@ -5,3 +5,7 @@ tmp/**/*
 
 .idea/**
 
+
+.idea/mp3Reader.iml
+
+.idea/workspace.xml
